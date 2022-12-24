@@ -25,12 +25,8 @@
 <meta property="og:title" content="K8s Waiting for Condition=Available=True" />
 <meta name="twitter:title" content="K8s Waiting for Condition=Available=True" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.fullaware.net/posts/k8s-wait/" /><meta property="og:description" content="While working with Ansible for standing up a vanilla Kubernetes 1.25.5 cluster I found myself separating the the initial bootstrapping of the cluster plus my chosen CNI antrea from the rest of the configuration due to waiting for antrea to become Ready.
-Found this post from Fabian Lee
-# this wait for &#39;Available=True&#39; only works for initial deployment, not rolling kubectl wait deployment -n default golang-hello-world-web --for condition=Available=True --timeout=90s # wait using &#39;rollout status&#39; kubectl rollout status deployment golang-hello-world-web -n default --timeout=90s  " />
-<meta name="twitter:description" content="While working with Ansible for standing up a vanilla Kubernetes 1.25.5 cluster I found myself separating the the initial bootstrapping of the cluster plus my chosen CNI antrea from the rest of the configuration due to waiting for antrea to become Ready.
-Found this post from Fabian Lee
-# this wait for &#39;Available=True&#39; only works for initial deployment, not rolling kubectl wait deployment -n default golang-hello-world-web --for condition=Available=True --timeout=90s # wait using &#39;rollout status&#39; kubectl rollout status deployment golang-hello-world-web -n default --timeout=90s  " /><meta property="og:image" content="https://www.fullaware.net/img/og.png" />
+<meta property="og:url" content="https://www.fullaware.net/posts/k8s-wait/" /><meta property="og:description" content="While working with Ansible for standing up a vanilla Kubernetes 1.25.5 cluster I found myself separating the the initial bootstrapping of the cluster, which includes intalling the CNI antrea from the rest of the configuration (metrics,metallb,contour) due to waiting for antrea to become Ready." />
+<meta name="twitter:description" content="While working with Ansible for standing up a vanilla Kubernetes 1.25.5 cluster I found myself separating the the initial bootstrapping of the cluster, which includes intalling the CNI antrea from the rest of the configuration (metrics,metallb,contour) due to waiting for antrea to become Ready." /><meta property="og:image" content="https://www.fullaware.net/img/og.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://www.fullaware.net/img/og.png" /><meta property="article:published_time" content="2022-12-24T10:17:05-05:00" /><meta property="article:modified_time" content="2022-12-24T10:17:05-05:00" />
 
@@ -108,7 +104,7 @@ Found this post from Fabian Lee
     </div>
     
     <div class="post-content markdown-body">
-        <p>While working with Ansible for standing up a vanilla Kubernetes 1.25.5 cluster I found myself separating the the initial bootstrapping of the cluster plus my chosen CNI <code>antrea</code> from the rest of the configuration due to waiting for <code>antrea</code> to become Ready.</p>
+        <p>While working with Ansible for standing up a vanilla Kubernetes 1.25.5 cluster I found myself separating the the initial bootstrapping of the cluster, which includes intalling the CNI <code>antrea</code> from the rest of the configuration (<code>metrics</code>,<code>metallb</code>,<code>contour</code>) due to waiting for <code>antrea</code> to become Ready.</p>
 <p>Found this post from <a href="https://fabianlee.org/2022/01/27/kubernetes-using-kubectl-to-wait-for-condition-of-pods-deployments-services/" target="_blank">Fabian Lee</a></p>
 <pre><code class="language-console"># this wait for 'Available=True' only works for initial deployment, not rolling
 kubectl wait deployment -n default golang-hello-world-web --for condition=Available=True --timeout=90s
@@ -116,7 +112,6 @@ kubectl wait deployment -n default golang-hello-world-web --for condition=Availa
 # wait using 'rollout status'
 kubectl rollout status deployment golang-hello-world-web -n default --timeout=90s
 </code></pre>
-
     </div>
 </article>
 

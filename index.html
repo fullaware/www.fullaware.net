@@ -105,9 +105,7 @@
 
     </div>
     <div class="post-item post-summary markdown-body">
-        While working with Ansible for standing up a vanilla Kubernetes 1.25.5 cluster I found myself separating the the initial bootstrapping of the cluster plus my chosen CNI antrea from the rest of the configuration due to waiting for antrea to become Ready.
-Found this post from Fabian Lee
-# this wait for 'Available=True' only works for initial deployment, not rolling kubectl wait deployment -n default golang-hello-world-web --for condition=Available=True --timeout=90s # wait using 'rollout status' kubectl rollout status deployment golang-hello-world-web -n default --timeout=90s  
+        <p>While working with Ansible for standing up a vanilla Kubernetes 1.25.5 cluster I found myself separating the the initial bootstrapping of the cluster, which includes intalling the CNI <code>antrea</code> from the rest of the configuration (<code>metrics</code>,<code>metallb</code>,<code>contour</code>) due to waiting for <code>antrea</code> to become Ready.</p>
     </div>
 </div>
 

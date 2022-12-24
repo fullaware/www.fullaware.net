@@ -13,9 +13,7 @@
       <pubDate>Sat, 24 Dec 2022 10:17:05 -0500</pubDate>
       
       <guid>https://www.fullaware.net/posts/k8s-wait/</guid>
-      <description>While working with Ansible for standing up a vanilla Kubernetes 1.25.5 cluster I found myself separating the the initial bootstrapping of the cluster plus my chosen CNI antrea from the rest of the configuration due to waiting for antrea to become Ready.
-Found this post from Fabian Lee
-# this wait for &#39;Available=True&#39; only works for initial deployment, not rolling kubectl wait deployment -n default golang-hello-world-web --for condition=Available=True --timeout=90s # wait using &#39;rollout status&#39; kubectl rollout status deployment golang-hello-world-web -n default --timeout=90s  </description>
+      <description>&lt;p&gt;While working with Ansible for standing up a vanilla Kubernetes 1.25.5 cluster I found myself separating the the initial bootstrapping of the cluster, which includes intalling the CNI &lt;code&gt;antrea&lt;/code&gt; from the rest of the configuration (&lt;code&gt;metrics&lt;/code&gt;,&lt;code&gt;metallb&lt;/code&gt;,&lt;code&gt;contour&lt;/code&gt;) due to waiting for &lt;code&gt;antrea&lt;/code&gt; to become Ready.&lt;/p&gt;</description>
     </item>
     
     <item>
