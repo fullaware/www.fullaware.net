@@ -19,6 +19,8 @@
 <title>K8s Waiting for Condition=Available=True - Full Aware</title>
 
 
+<meta name="author" content="Full Aware" />
+
 
 
 
@@ -80,6 +82,8 @@
         <div class="col-12 header">
             <a class="title-main" href="https://www.fullaware.net/">Full Aware</a>
             
+            <span class="title-sub">Professional techno-tinkerer</span>
+            
         </div>
     </div>
 </header>
@@ -106,7 +110,7 @@
     <div class="post-content markdown-body">
         <p>While working with Ansible for standing up a vanilla Kubernetes 1.25.5 cluster I found myself separating the the initial bootstrapping of the cluster, which includes intalling the CNI <code>antrea</code> from the rest of the configuration (<code>metrics</code>,<code>metallb</code>,<code>contour</code>) due to waiting for <code>antrea</code> to become Ready.</p>
 <p>Found this post from <a href="https://fabianlee.org/2022/01/27/kubernetes-using-kubectl-to-wait-for-condition-of-pods-deployments-services/" target="_blank">Fabian Lee</a></p>
-<pre><code class="language-console"># this wait for 'Available=True' only works for initial deployment, not rolling
+<pre><code class="language-bash"># this wait for 'Available=True' only works for initial deployment, not rolling
 kubectl wait deployment -n default golang-hello-world-web --for condition=Available=True --timeout=90s
 
 # wait using 'rollout status'
@@ -272,7 +276,7 @@ kubectl rollout status deployment golang-hello-world-web -n default --timeout=90
         <div class="col-12 footer">
             
             <span>&copy; 2022-2022
-                <a href="https://www.fullaware.net/"></a>
+                <a href="https://www.fullaware.net/">Full Aware</a>
                 
                 | Powered by <a href="https://github.com/dsrkafuu/hugo-theme-fuji/"
                    target="_blank">Fuji-v2</a> &amp; <a href="https://gohugo.io/"
