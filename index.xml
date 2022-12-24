@@ -27,5 +27,14 @@ import life life()  </description>
       <description>&lt;p&gt;Future home of Kubernetes, Python, VMware and homelab efforts.&lt;/p&gt;</description>
     </item>
     
+    <item>
+      <title>Homelab</title>
+      <link>https://www.fullaware.net/posts/homelab/</link>
+      <pubDate>Fri, 23 Dec 2022 09:03:20 -0800</pubDate>
+      
+      <guid>https://www.fullaware.net/posts/homelab/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
